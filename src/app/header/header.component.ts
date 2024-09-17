@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { DisplayCurrencyComponent } from '../display-currency/display-currency.component';
 
 @Component({
@@ -9,6 +9,6 @@ import { DisplayCurrencyComponent } from '../display-currency/display-currency.c
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-  euro = 43.5433;
-  dollar = 41.7689;
+  @Input() usd = 0;
+  @Input() eur = 0;
 }
