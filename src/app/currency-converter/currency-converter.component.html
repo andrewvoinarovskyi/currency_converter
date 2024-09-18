@@ -1,0 +1,25 @@
+<div class="currency-converter">
+  <div class="currency-input">
+    <label for="amount1">Enter amount:</label>
+    <input id="amount1" type="number" [(ngModel)]="amount1" (ngModelChange)="onFirstAmountChange()" placeholder="Enter amount" />
+    <label for="currency1">Choose currency:</label>
+    <select id="currency1" [(ngModel)]="currency1" (ngModelChange)="onFirstCurrencyChange()">
+        @for (rate of (rates | keyvalue); track $index) {
+          <option [value]="rate.key">{{ rate.key }}</option>
+        }
+    </select>
+  </div>
+
+  <div class="separator"></div>
+
+  <div class="currency-input"> 
+    <label for="amount2">Enter amount:</label>
+    <input id="amount2" type="number" [(ngModel)]="amount2" (ngModelChange)="onSecondAmountChange()" placeholder="Enter amount" />
+    <label for="currency2">Choose currency:</label>
+    <select id="currency2" [(ngModel)]="currency2" (ngModelChange)="onSecondCurrencyChange()">
+        @for (rate of (rates | keyvalue); track $index) {
+          <option [value]="rate.key">{{ rate.key }}</option>
+        }
+    </select>
+  </div>
+</div>

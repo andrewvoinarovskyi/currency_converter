@@ -1,6 +1,8 @@
+import { Ccy } from "./converter.types";
+
 export interface Currency {
-    ccy: string,
-    base_ccy: string,
+    ccy: Ccy,
+    base_ccy: Ccy,
     buy: number,
     sell: number,
 }

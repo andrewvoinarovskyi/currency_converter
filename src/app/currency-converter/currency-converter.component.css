@@ -1,0 +1,80 @@
+.currency-converter {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #f3f3f3, #ffffff);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+}
+
+.currency-converter:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.currency-input {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    background: #fafafa;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.currency-input:hover {
+    background: #f0f0f0;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #333;
+    font-size: 14px;
+}
+
+input,
+select {
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+
+}
+input:focus,
+select:focus {
+    outline: none;
+    border: 1px solid #007bff;
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.4);
+}
+
+input:hover,
+select:hover {
+    border: 1px solid #007bff;
+}
+
+input::placeholder {
+    color: #999;
+}
+
+.separator {
+    height: 2px;
+    background-color: #ccc;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 480px) {
+    .currency-converter {
+        width: 95%;
+    }
+}
